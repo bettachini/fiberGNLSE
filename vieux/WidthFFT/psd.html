@@ -1,0 +1,430 @@
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+  
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+          <title>Support - Using FFT to Obtain Simple Spectral Analysis Plots</title>
+<link rel="stylesheet" href="/includes_content/css/dom.css" type="text/css">
+<link rel="stylesheet" href="/includes_content/css/site4.css" type="text/css">
+<link rel="stylesheet" href="/includes_content/css/site5_pre.css" type="text/css">
+<link rel="stylesheet" href="/includes_content/nextgen/css/header-footer-nextgen.css" type="text/css">
+<link rel="stylesheet" href="/includes_content/css/print.css" type="text/css" media="print">
+      	<script type="text/javascript" src="/includes_content/nextgen/scripts/jquery/jquery-latest.js"></script>
+          	<script type="text/javascript" src="/includes_content/nextgen/scripts/jquery/jquery.hover-intent.js"></script>
+        <script type="text/javascript" language="JavaScript1.3">var host_pre = "http://www";</script>
+<script type="text/javascript" language="JavaScript1.3">var request_path = "%2Fsupport%2Ftech-notes%2F1700%2F1702.html";</script>
+        <script type="text/javascript" language="JavaScript1.3" src="/includes_content/jscript/popup_menus/popup_menus.js"></script>
+        <script type="text/javascript" language="JavaScript1.3">var domain = "com";</script>
+        <script type="text/javascript" language="JavaScript1.3" src="/includes_content/jscript/global_nav/global_nav_universal_list.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>	
+
+
+          <script type="text/javascript" language="JavaScript1.3" src="/includes/jscript/local_nav.js"></script>
+
+        <script type="text/javascript" language="JavaScript1.3" src="/includes/jscript/common.js"></script>
+      
+  </head>
+    <body>
+      
+
+<ul id="navbar">
+  <li><a href="http://www.mathworks.com/products/?s_cid=global_nav">Products &amp; Services</a></li>
+  <li><a href="http://www.mathworks.com/solutions/?s_cid=global_nav">Solutions</a></li>
+  <li><a href="http://www.mathworks.com/academia/?s_cid=global_nav">Academia</a></li>
+  <li><a href="http://www.mathworks.com/support/?s_cid=global_nav">Support</a></li>
+  <li><a href="http://www.mathworks.com/matlabcentral/?s_cid=global_nav">User Community</a></li>
+  <li><a href="http://www.mathworks.com/company/events/?s_cid=global_nav">Events</a></li>
+  <li><a href="http://www.mathworks.com/company/?s_cid=global_nav">Company</a></li>
+</ul>
+
+<a href="#content" tabindex="1"><img src="/images/pixelclear.gif" width="1" height="1" border="0" alt="Skip to Main Content" id="content_skiplink"></a>
+<a href="#searchskip" tabindex="2"><img src="/images/pixelclear.gif" width="1" height="1" border="0" alt="Skip to Search" id="search_skiplink"></a>
+<div id="globaltop2" style="background-image: url(/includes_content/images/global_nav/bg_header_935.jpg);"> <img id="print_logo" src="/images/nextgen/global/bg_header_mwlogo_notag.jpg" alt="MathWorks - Accelerating the pace of engineering and science"> <a href="http://www.mathworks.com/"><img id="logopixel" src="/images/pixelclear.gif" width="173" height="60" alt=""></a>
+  <div id="tagline">Accelerating the pace of engineering and science</div>
+
+
+<div id="ptools2">
+  <div class="headernav">
+    <ul>
+      <li class="headernav_country rollover_delay"><a href="http://www.mathworks.com/company/worldwide/">United States</a>
+        <div class="countrynav_container gradient shadow">
+          <ul>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.com" rel="nofollow">United States</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.com" rel="nofollow">Canada</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.com.au" rel="nofollow">Australia</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.de" rel="nofollow">&Ouml;sterreich</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.nl" rel="nofollow">Belgium</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.cn" rel="nofollow">中国</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.se" rel="nofollow">Denmark</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.se" rel="nofollow">Finland</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.fr" rel="nofollow">France</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.de" rel="nofollow">Deutschland</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.in" rel="nofollow">India</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.co.uk" rel="nofollow">Ireland</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.it" rel="nofollow">Italia</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.co.jp" rel="nofollow">日本</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.co.kr" rel="nofollow">한국</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.nl" rel="nofollow">Luxembourg</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.nl" rel="nofollow">Netherlands</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.se" rel="nofollow">Norway</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.com" rel="nofollow">Portugal</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.es" rel="nofollow">Espa&ntilde;a</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.se" rel="nofollow">Sweden</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.ch" rel="nofollow">Schweiz / Suisse</a></li>
+            <li><a href="http://www.mathworks.com/includes_content/domainRedirect/country_select.html?uri=%2Fsupport%2Ftech-notes%2F1700%2F1702.html&domain=mathworks.co.uk" rel="nofollow">United Kingdom</a></li>
+            <li><a href="http://www.mathworks.com/company/worldwide/">All Other Countries</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="headernav_contact"><a href="http://www.mathworks.com/company/aboutus/contact_us/">Contact Us</a></li>
+      <li class="headernav_store"><a href="http://www.mathworks.com/store/default.do?s_cid=store_top_nav">Store</a></li>
+      <li class="headernav_search">
+  	<form name="search" id="site_search" class="site_search" action="/searchresults/" method="get">
+  	  <input type="hidden" name="c[]" value="entiresite" />
+  		<input type="text" name="q" id="query" class="textfield" />
+  		<input type="submit" id="searchbutton" value="Search" class="submit_go" />
+  	</form>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="access2">
+	 	 <ul><li class="mwa-nav_account"><a rel="nofollow" href="http://www.mathworks.com/accesslogin/createProfile.do?uri=http://www.mathworks.com/support/tech-notes/1700/1702.html" target="_top" id="mwa-create_account">Create Account</a></li><li class="mwa-nav_login"><a rel="nofollow" href="https://www.mathworks.com/accesslogin/login.do?uri=http://www.mathworks.com/support/tech-notes/1700/1702.html" target="_top" id="mwa-log_in">Log In</a></li></ul>
+</div>
+</div>
+<div class="topnav_frame_classic">
+  <!-- ADDED MARGIN TO MAKE ROOM FOR TOP NAV -->
+</div>
+
+
+      <table id="mainframe" summary="layout" width="935" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td id="leftnavcol" valign="top" width="160">
+                 <p>&nbsp;</p>
+                <table id="leftnav" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr id="lmenu0">
+    <td class="inactive"
+      onClick="document.location='/support/index.html'"
+    onMouseOver="this.className='hover';"
+    onMouseOut="this.className='inactive'">
+      <a href="/support/index.html"  onclick="return false">Support</a>
+    </td>
+  </tr>
+  <tr id="lmenu1">
+    <td class="inactive" style="cursor:default">
+     How To and Troubleshooting
+    </td>
+  </tr>
+    <tr id="lmenu1-0">
+    <td class="sinactive"
+      onClick="document.location='/help'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/help"  onclick="return false">Documentation</a>
+    </td>
+  </tr>
+    <tr id="lmenu1-1">
+    <td class="sinactive"
+      onClick="document.location='/support/product/examples-index.html'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/support/product/examples-index.html"  onclick="return false">Examples</a>
+    </td>
+  </tr>
+    <tr id="lmenu1-2">
+    <td class="sinactive"
+      onClick="document.location='/matlabcentral/answers/'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/matlabcentral/answers/"  onclick="return false">Community Answers</a>
+    </td>
+  </tr>
+    <tr id="lmenu1-3">
+    <td class="sinactive"
+      onClick="document.location='/support/product/technical-solutions-index.html'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/support/product/technical-solutions-index.html"  onclick="return false">Technical Solutions</a>
+    </td>
+  </tr>
+    <tr id="lmenu1-4">
+    <td class="sinactive"
+      onClick="document.location='/support/bugreports/'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/support/bugreports/"  onclick="return false">Bug Reports</a>
+    </td>
+  </tr>
+  <tr id="lmenu2">
+    <td class="inactive" style="cursor:default">
+     Installation and Downloads
+    </td>
+  </tr>
+    <tr id="lmenu2-5">
+    <td class="sinactive"
+      onClick="document.location='/support/install.html'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/support/install.html"  onclick="return false">Installation and Setup Help</a>
+    </td>
+  </tr>
+    <tr id="lmenu2-6">
+    <td class="sinactive"
+      onClick="document.location='/downloads/web_downloads/'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/downloads/web_downloads/"  onclick="return false">Download Trials and Updates</a>
+    </td>
+  </tr>
+    <tr id="lmenu2-7">
+    <td class="sinactive"
+      onClick="document.location='/support/sysreq/current_release/'"
+    onMouseOver="this.className='shover';"
+    onMouseOut="this.className='sinactive'">
+      <a href="/support/sysreq/current_release/"  onclick="return false">System Requirements</a>
+    </td>
+  </tr>
+  <tr id="lmenu3">
+    <td class="inactive"
+      onClick="document.location='/support/contact_us/index.html'"
+    onMouseOver="this.className='hover';"
+    onMouseOut="this.className='inactive'">
+      <a href="/support/contact_us/index.html"  onclick="return false">Contact Support</a>
+    </td>
+  </tr>
+
+                  <tr>
+                    <td id="bcorner" align="right"><img src="/includes_content/images/local_nav/nav_bottom_corner.gif" alt="" height="5" width="5" border="0"></td>
+                  </tr>
+                  <tr>
+                    <td id="lnbmline" height="3"></td>
+                  </tr>
+                </table>
+            </td>
+          <td id="bodycol" valign="top" class="default"> 
+            <table summary="layout" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td  valign="top">
+                    <div id="mainbody" ><a name="content"></a>
+                        <h1>1702 - Using FFT to Obtain Simple Spectral Analysis Plots</h1>
+    <hr>
+    <p>
+    <h2>Question:</h2>
+    <p>How can you correctly scale the output of the <kbd>FFT</kbd> function to obtain a meaningful
+      power versus frequency plot?</p>
+    <p>
+    <h2>Answer:</h2>
+    <p>Assume <kbd>x</kbd> is a vector containing your data. A sample vector used with this technical
+      note is a 200 Hz sinusoid signal. </p>
+    <pre class="code">% Sampling frequency 
+Fs = 1024;  
+<br>
+% Time vector of 1 second  
+t = 0:1/Fs:1; 
+<br>
+% Create a sine wave of 200 Hz.
+x =sin(2*pi*t*200);
+</pre>
+    <p>First, you need to call the <kbd>FFT</kbd> function. For the fastest possible ffts, you will
+      want to pad your data with enough zeros to make its length a power of 2. The built-in <kbd>FFT</kbd> function
+      does this for you automatically, if you give a second argument specifying the overall length
+      of the fft, as demonstrated below: </p>
+    <pre class="code">% Use next highest power of 2 greater than or equal to length(x) to calculate fft
+<BR>nfft = 2^(nextpow2(length(x)));
+<br>
+% Take fft, padding with zeros so that length(fftx) is equal to nfft 
+<BR>fftx = fft(x,nfft);
+</pre>
+    <p>If <kbd>nfft</kbd> is even (which it will be, if you use the above two commands above), then
+      the magnitude of the fft will be symmetric, such that the first <kbd>(1+nfft/2)</kbd> points
+      are unique, and the rest are symmetrically redundant. The DC component of <kbd>x</kbd> is <kbd>fftx(1)</kbd> ,
+      and <kbd>fftx(1+nfft/2)</kbd>> is the Nyquist frequency component of x. If <kbd>nfft</kbd> is
+      odd, however, the Nyquist frequency component is not evaluated, and the number of unique points
+      is <kbd>(nfft+1)/2</kbd> . This can be generalized for both cases to <kbd>ceil((nfft+1)/2)</kbd> . </p>
+    <pre class="code">% Calculate the number of unique points
+<BR>NumUniquePts = ceil((nfft+1)/2);
+
+% FFT is symmetric, throw away second half
+<BR>fftx = fftx(1:NumUniquePts);
+</pre>
+    <p>Next, calculate the magnitude of the fft: </p>
+    <pre class="code">% Take the magnitude of fft of x
+<BR>mx = abs(fftx);
+</pre>
+    <p>Consider the fact that MATLAB does not scale the output of fft by the length of the input: </p>
+    <pre class="code">% Scale the fft so that it is not a function of the length of x
+<BR>mx = mx/length(x);
+<br>
+% Now, take the square of the magnitude of fft of x which has been scaled properly.
+mx = mx.^2; 
+<br>
+% Since we dropped half the FFT, we multiply mx by 2 to keep the same energy.
+% The DC component and Nyquist component, if it exists, are unique and should not be multiplied by 2. 
+<BR>if rem(nfft, 2) % odd nfft excludes Nyquist point 
+&nbsp;&nbsp;mx(2:end) = mx(2:end)*2;
+else
+&nbsp;&nbsp;mx(2:end -1) = mx(2:end -1)*2;
+end</pre>
+    <p>Now, create a frequency vector: </p>
+    <pre class="code">% This is an evenly spaced frequency vector with NumUniquePts points.
+<BR><BR>f = (0:NumUniquePts-1)*Fs/nfft;</pre>
+    <BR>
+    <p>Finally, generate the plot with a title and axis labels.</p>
+    <pre class="code">% Generate the plot, title and labels.
+plot(f,mx);
+title('Power Spectrum of a 200Hz Sine Wave');
+xlabel('Frequency (Hz)'); 
+ylabel('Power');</pre>
+<BR>
+    <p>Bringing this all together, you get the following MATLAB file: </p>
+    <pre class="code">% Sampling frequency 
+<BR>Fs = 1024; 
+<br>
+% Time vector of 1 second 
+<BR>t = 0:1/Fs:1; 
+<br>
+% Create a sine wave of 200 Hz.
+<BR>x = sin(2*pi*t*200); 
+<br>
+% Use next highest power of 2 greater than or equal to length(x) to calculate FFT.
+nfft= 2^(nextpow2(length(x))); 
+<br>
+% Take fft, padding with zeros so that length(fftx) is equal to nfft 
+<BR>fftx = fft(x,nfft); 
+<br>
+% Calculate the numberof unique points
+NumUniquePts = ceil((nfft+1)/2); 
+<br>
+% FFT is symmetric, throw away second half 
+<BR>fftx = fftx(1:NumUniquePts); 
+<br>
+% Take the magnitude of fft of x and scale the fft so that it is not a function of the length of x
+<BR>mx = abs(fftx)/length(x); 
+<br>
+% Take the square of the magnitude of fft of x. 
+<BR>mx = mx.^2; 
+<br>
+% Since we dropped half the FFT, we multiply mx by 2 to keep the same energy.
+% The DC component and Nyquist component, if it exists, are unique and should not be multiplied by 2.
+<BR>
+if rem(nfft, 2) % odd nfft excludes Nyquist point
+&nbsp;&nbsp;mx(2:end) = mx(2:end)*2;
+else
+&nbsp;&nbsp;mx(2:end -1) = mx(2:end -1)*2;
+end
+<br>
+% This is an evenly spaced frequency vector with NumUniquePts points. 
+<BR>f = (0:NumUniquePts-1)*Fs/nfft; 
+<br>
+% Generate the plot, title and labels. 
+<BR>plot(f,mx); 
+title('Power Spectrum of a 200Hz Sine Wave'); 
+xlabel('Frequency (Hz)'); 
+ylabel('Power'); </pre>
+    <p>The resulting plot looks like the following: </p>
+    <p><img width="368" height="240" src="1702.bmp"></p>
+    <p>The Signal Processing Toolbox 6.2 adds a new spectrum object.  Spectrum objects contain parameter information for a particular spectral estimation method (e.g., spectrum.welch). This object provides an improved way to view and manipulate spectral estimation parameters. 
+      See the spectrum reference page (<a href="http://www.mathworks.com/access/helpdesk/help/toolbox/signal/spectrum.html">Spectrum Objects)</a> and the associated estimation method reference pages (<a href="/help/toolbox/signal/f12-6587.html#f12-9641">Spectral Estimation Method</a>) for more information.  The object has methods to evaluate the power spectral density for parametric and non-parametric (conventional) techniques and the mean-square spectrum for the non-parametric techniques.  For subspace spectral estimation techniques (<a href="http://www.mathworks.com/access/helpdesk/help/toolbox/signal/spectrum.music.html">MUSIC</a> and <a href="http://www.mathworks.com/access/helpdesk/help/toolbox/signal/spectrum.eigenvector.html">EIG</a>),  however, the object has methods to compute the pseudospectrum.  As an example for using the spectrum object, refer to the following demo:
+<a href="http://www.mathworks.com/products/signal/demos.html?file=/products/demos/shipping/signal/deterministicsignalpower.html">Measuring the Power of Deterministic Periodic Signals</a>.
+    <p>
+
+                    
+                    </div>
+                  </td>
+                    <td  valign="top" width="160">
+                    <table id="rightcol" width="160" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="callme">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="trybuy">
+<tr>
+<td width="19" valign="top" style="padding-top:2px;"><a href="/support/contact_us/index.html" target=""><img src="/includes/images/tryitbuyit/call.gif" alt="" width="15" height="14"></a></td>
+<td style="padding-right:9px" valign="top"><a href="/support/contact_us/index.html" target="">Contact support</a></td>
+</tr>
+<tr>
+<td valign="top" class="block_share" colspan="2">
+<div class="addthis_toolbox addthis_default_style"><a href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=mathworks" class="addthis_button_compact">Share</a></div>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true, "services_compact":"facebook,email,twitter,print,linkedin,favorites,stumbleupon,more", "ui_open_windows":true, "ui_header_color":"#ffffff", "ui_header_background":"#3F74C1", "ui_cobrand":"MathWorks","data_track_clickback":true, ui_language: "en"
+};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mathworks"></script>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+                    </td>
+                </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      
+
+	<div class="footer_container">
+	 <div class="footer">
+	  <div class="social_media_icon_container">
+      	<div class="social_media_icons">
+            <ul class="footernav">
+                <li class="footernav_rss"><a href="http://www.mathworks.com/company/rss/index.html"></a></li>
+                <li class="footernav_google"><a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_cid=mlc_fbk&url=https://plus.google.com/117177960465154322866?prsrc=3" target="_blank"></a></li>
+                 <li class="footernav_facebook"><a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_cid=mlc_fbk&url=http://www.facebook.com/MATLAB" target="_blank"></a></li>
+               
+                <li class="footernav_twitter"><a href="http://www.mathworks.com/programs/bounce_hub_generic.html?s_cid=mlc_twt&url=http://www.twitter.com/MATLAB" target="_blank"></a></li>
+           </ul>
+        </div>
+           <p><em>Join the conversation</em></p>
+       </div>
+       <ul class="footernav">
+           <li class="footernav_piracy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/piracy.html" rel="nofollow" >Preventing Piracy</a></li>
+           <li class="footernav_privacy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/" rel="nofollow" >Privacy Policy</a></li>
+           <li class="footernav_trademarks"><a href="http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html" rel="nofollow" >Trademarks</a></li>
+           <li class="footernav_patents"><a href="http://www.mathworks.com/company/aboutus/policies_statements/patents.html" rel="nofollow" >Patents</a></li>
+           <li class="footernav_help"><a href="/help.html">Site Help</a></li>
+      </ul>
+	  <div class="copyright">&copy; 1994-2012 The MathWorks, Inc.</div>
+     </div>
+	</div>
+<!-- Google Analytics for external-test -->
+
+<!-- End code to put in footer /includes_content/lib/globalfooter/global_footer_tpl.html -->
+
+
+
+      
+<script type="text/javascript" language="JavaScript1.3" src="/includes/jscript/footer.js"></script>
+
+      
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="/scripts/omniture/s_code.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+<!--
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->    </body>
+  </html>

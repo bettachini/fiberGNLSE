@@ -1,0 +1,21 @@
+clear all
+close all
+
+format long e
+
+addpath('~/documents/Fiber/simulacion/aux_codes/');
+results_path= ('~/documents/Fiber/simulacion/neu/results/');
+
+[sim,pump,fibre]=parametres;    % standard simulation parameters
+
+% variación de parámetros
+% save log: append a file with varied parametres
+
+pump= InputField(sim,pump,fibre); % using variated parameters
+
+% ssfm run
+tol= 1e-8;                          % tolerance
+[u1, distances, out_spect, shapes_time, nf]= IP_CQEM_FD_struct(pump.u0,sim.dt,fibre.L,sim.dz,fibre.alpha,fibre.betap,fibre.gamma,sim.wzdw,sim.wzdw,tol,sim.option);
+
+% saves spectrum at output as image and processable data
+spects= shapes_time.spects;

@@ -1,0 +1,18 @@
+function SimLog(ResultsPath, sim, pump, fibre)
+
+%% checks wheter log file is present, creates it otherwise
+log_FileName= 'SimLog.txt';
+LogFilePath= strcat(ResultsPath,log_FileName);
+if exist( LogFilePath, 'file')
+	LogFileId= fopen( LogFilePath, 'a');
+else
+    LogFileId= fopen( LogFilePath, 'w');
+    fprintf(LogFileId, 'FileName\tFibre\t\tp_tfwhm[ps]\tp_chirp[fs^2]\tp_mean[W]\n');
+end
+
+%% writes filenames and parameters
+fprintf(LogFileId, '%s\t\n',sim.FileName, fibre.name, pum, ,pump.Pmean);
+
+
+%% close log file
+fclose(LogFileId);
