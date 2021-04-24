@@ -3,15 +3,15 @@
 Generalized Nonlinear Schrodinger Equation based simulation of nonlinear broadening of ultrashort pulses in optical fibers.
 GNU Octave / Mathworks MATLAB compatible code.
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">fiberGNLSE</span> by <span property="cc:attributionName">Víctor A. Bettachini</span> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p> 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">fiberGNLSE</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Víctor A. Bettachini</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
-> Further details at
+> Further details at  
 > Rieznik, A. A., A. M. Heidt, P. G. Konig, V. A. Bettachini, and D. F. Grosz.
-> ‘Optimum Integration Procedures for Supercontinuum Simulation’.
-> Photonics Journal, IEEE 4, no. 2 (12 April 2012): 552–560.
+> ‘Optimum Integration Procedures for Supercontinuum Simulation’.  
+> Photonics Journal, IEEE 4, no. 2 (12 April 2012): 552–560.  
 > https://doi.org/10.1109/JPHOT.2012.2188281.
 
-Octave functions used
+Octave functions used:
 - Generator (directory) generate spectra
 - General: (script) Spans sim parameters
 	- Parameters (function)	
