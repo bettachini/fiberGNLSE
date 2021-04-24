@@ -3,7 +3,7 @@
 Generalized Nonlinear Schrodinger Equation based simulation of nonlinear broadening of ultrashort pulses in optical fibers.
 GNU Octave / Mathworks MATLAB compatible code.
 
-Copyright 2008 Víctor A. Bettachini <bettachini@df.uba.ar>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">fiberGNLSE</span> by <span property="cc:attributionName">Víctor A. Bettachini</span> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p> 
 
 > Further details at
 > Rieznik, A. A., A. M. Heidt, P. G. Konig, V. A. Bettachini, and D. F. Grosz.
@@ -24,4 +24,3 @@ Octave functions used
 	- SpectLabel_oct.m (function)
 	- SimLog (function)
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">fibreGNLSE</span> por <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Víctor A. Bettachini</span> se distribuye bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.
